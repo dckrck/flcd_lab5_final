@@ -1,0 +1,9 @@
+N = { S A B C D }
+E = { + * not }
+S = S
+P = {
+    S -> A B
+    A -> S | not C
+    B -> + S
+    C -> * A | epsilon
+}

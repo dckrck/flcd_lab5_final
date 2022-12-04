@@ -1,0 +1,17 @@
+if
+else
+read
+write
+var
+while
+for
+break
+return
+not
+in
+continue
+int
+float
+string
+char
+print

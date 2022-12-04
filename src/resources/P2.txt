@@ -1,0 +1,11 @@
+var number = read();
+var divisor = 2;
+var is_prime = 1;
+while (is_prime == 1 and divisor <= number / 2) {
+if(number % divisor == 0)
+{
+is_prime = 0;
+}
+divisor = divisor + 1;
+}
+print(is_prime);

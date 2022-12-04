@@ -1,0 +1,20 @@
+var first;
+var second;
+var third;
+first = read();
+second = read();
+third = read();
+var max_num = first;
+if(second > max_num)
+{
+max_num = second;
+}
+if(third > max_num)
+{
+max_num = third;
+}
+print(max_num);
+
+while(first > 100) {
+    print(first)
+}

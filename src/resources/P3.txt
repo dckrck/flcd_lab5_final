@@ -1,0 +1,22 @@
+var a = read();
+var b = read();
+var stop = 1;
+var result = a;
+if(b < a)
+{
+result = b;
+}
+if(a % result == 0 and b % result == 0)
+{
+print(result);
+return;
+}
+while(result > 0 and stop == 1)
+{
+result--;
+if(a % result == 0 and b % result == 0)
+{
+stop = 0;
+}
+}
+print(result);

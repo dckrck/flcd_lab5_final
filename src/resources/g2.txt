@@ -1,0 +1,21 @@
+N = { program statements statement var_stmt array_stmt if_stmt while_stmt assign_stmt return_stmt identifier_list raw_identifier_list expression exp_list condition comparison_operator and_or }
+E = { + - * < <= = > >= == != ( ) [ ] : ; space , " ' if else read write var while for break return not in continue array }
+S = program
+P = {
+    program -> statements
+    statements -> statement statements | epsilon
+    statement -> var_stmt | array_stmt | assign_stmt | if_stmt | while_stmt | return_stmt
+    var_stmt -> var identifier_list
+    array_stmt -> array < positive_number > raw_identifier_list
+    if_stmt -> if ( condition ) { statements } | if ( condition ) { statements } else { statements }
+    while_stmt -> while ( condition ) { statements }
+    assign_stmt -> identifier = expression
+    return_stmt -> return expression
+    identifier_list -> identifier | identifier = expression | identifier = expression , identifier_list
+    raw_identifier_list -> identifier | identifier , raw_identifier_list
+    expression -> int_exp | string_exp | boolean_exp
+    exp_list -> expression | expression , exp_list
+    condition -> expression comparison_operator expression | expression comparison_operator expression and_or condition
+    comparison_operator -> == | < | > | <= | >=
+    and_or -> and | or
+}
